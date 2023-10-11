@@ -37,4 +37,4 @@ https://tp-apirest-pag.onrender.com
 3- Dropear en la ventana que se abrira, el archivo "ApiRequestPaginacion.postman_collection.json"
 
 ## Realizado por
-[Ezquiel Tenerini](https://github.com/Teneze)
+[Ezequiel Tenerini](https://github.com/Teneze)
