@@ -1,0 +1,603 @@
+{
+	"info": {
+		"_postman_id": "98dc79d2-3680-4371-83fb-ff6c6a0e4076",
+		"name": "Api Request",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "30235544"
+	},
+	"item": [
+		{
+			"name": "Persona",
+			"item": [
+				{
+					"name": "Get all",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://tp-apirest-pag.onrender.com/api/v1/personas",
+							"protocol": "https",
+							"host": [
+								"tp-apirest-pag",
+								"onrender",
+								"com"
+							],
+							"path": [
+								"api",
+								"v1",
+								"personas"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get one",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://tp-apirest-pag.onrender.com/api/v1/personas/1",
+							"protocol": "https",
+							"host": [
+								"tp-apirest-pag",
+								"onrender",
+								"com"
+							],
+							"path": [
+								"api",
+								"v1",
+								"personas",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"nombre\": \"Juan\",\r\n    \"apellido\": \"Albornoz\",\r\n    \"dni\": 48726483,\r\n    \"domicilio\":{\r\n        \"calle\": \"Taboada\",\r\n        \"numero\": 1482,\r\n        \"localidad\": {\r\n            \"id\": 1,\r\n            \"localidad\": \"Lujan de Cuyo\"\r\n        }\r\n\r\n    },\r\n    \"libros\": [\r\n        {\r\n            \"titulo\": \"Tiempos feroces\",\r\n            \"fecha\": 2008,\r\n            \"genero\": \"Terror\",\r\n            \"pagina\": 87,\r\n            \"autores\": [\r\n                {\r\n                    \"id\": 1,\r\n                    \"nombre\": \"Fabian\",\r\n                    \"apellido\": \"Sevilla\",\r\n                    \"biografia\": \"Fabian Sevilla es un aclamado autor contemporáneo conocido por sus obras literarias que exploran temas profundos de la condición humana. Su prosa elocuente y su enfoque en la introspección han dejado una marca perdurable en la literatura contemporánea.\"\r\n                }\r\n\r\n            ]\r\n        }\r\n    ]\r\n}"
+						},
+						"url": {
+							"raw": "https://tp-apirest-pag.onrender.com/api/v1/personas",
+							"protocol": "https",
+							"host": [
+								"tp-apirest-pag",
+								"onrender",
+								"com"
+							],
+							"path": [
+								"api",
+								"v1",
+								"personas"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n        \"id\": 1,\r\n        \"nombre\": \"Julian\",\r\n        \"apellido\": \"Castrogamer\",\r\n        \"dni\": 48726483,\r\n        \"domicilio\": {\r\n            \"id\": 1,\r\n            \"calle\": \"Taboada\",\r\n            \"numero\": 1482,\r\n            \"localidad\": {\r\n                \"id\": 1,\r\n                \"denominacion\": \"Lujan de Cuyo\"\r\n            }\r\n        },\r\n        \"libros\": [\r\n            {\r\n                \"id\": 1,\r\n                \"titulo\": \"Tiempos feroces\",\r\n                \"fecha\": 2008,\r\n                \"genero\": \"Terror\",\r\n                \"paginas\": 0,\r\n                \"autores\": [\r\n                    {\r\n                        \"id\": 2,\r\n                        \"nombre\": \"Fabian\",\r\n                        \"apellido\": \"Sevilla\",\r\n                        \"biografia\": \"Fabian Sevilla es un aclamado autor contemporáneo conocido por sus obras literarias que exploran temas profundos de la condición humana. Su prosa elocuente y su enfoque en la introspección han dejado una marca perdurable en la literatura contemporánea.\"\r\n                    }\r\n                ]\r\n            }\r\n        ]\r\n    }"
+						},
+						"url": {
+							"raw": "https://tp-apirest-pag.onrender.com/api/v1/personas/1",
+							"protocol": "https",
+							"host": [
+								"tp-apirest-pag",
+								"onrender",
+								"com"
+							],
+							"path": [
+								"api",
+								"v1",
+								"personas",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "https://tp-apirest-pag.onrender.com/api/v1/personas/2",
+							"protocol": "https",
+							"host": [
+								"tp-apirest-pag",
+								"onrender",
+								"com"
+							],
+							"path": [
+								"api",
+								"v1",
+								"personas",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Search",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://tp-apirest-pag.onrender.com/api/v1/personas/search?filtro=Juan",
+							"protocol": "https",
+							"host": [
+								"tp-apirest-pag",
+								"onrender",
+								"com"
+							],
+							"path": [
+								"api",
+								"v1",
+								"personas",
+								"search"
+							],
+							"query": [
+								{
+									"key": "filtro",
+									"value": "Juan"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get All Page",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://tp-apirest-pag.onrender.com/api/v1/personas/page?page=0&size=5&sort=id,asc",
+							"protocol": "https",
+							"host": [
+								"tp-apirest-pag",
+								"onrender",
+								"com"
+							],
+							"path": [
+								"api",
+								"v1",
+								"personas",
+								"page"
+							],
+							"query": [
+								{
+									"key": "page",
+									"value": "0"
+								},
+								{
+									"key": "size",
+									"value": "5"
+								},
+								{
+									"key": "sort",
+									"value": "id,asc"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Search Page",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://tp-apirest-pag.onrender.com/api/v1/personas/searchPage?filtro=Juan&page=0&size=5&sort=id,asc",
+							"protocol": "https",
+							"host": [
+								"tp-apirest-pag",
+								"onrender",
+								"com"
+							],
+							"path": [
+								"api",
+								"v1",
+								"personas",
+								"searchPage"
+							],
+							"query": [
+								{
+									"key": "filtro",
+									"value": "Juan"
+								},
+								{
+									"key": "page",
+									"value": "0"
+								},
+								{
+									"key": "size",
+									"value": "5"
+								},
+								{
+									"key": "sort",
+									"value": "id,asc"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Autor",
+			"item": [
+				{
+					"name": "Get all",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://tp-apirest-pag.onrender.com/api/v1/autores",
+							"protocol": "https",
+							"host": [
+								"tp-apirest-pag",
+								"onrender",
+								"com"
+							],
+							"path": [
+								"api",
+								"v1",
+								"autores"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get one",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://tp-apirest-pag.onrender.com/api/v1/autores/1",
+							"protocol": "https",
+							"host": [
+								"tp-apirest-pag",
+								"onrender",
+								"com"
+							],
+							"path": [
+								"api",
+								"v1",
+								"autores",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"nombre\":\"Fabian\",\r\n    \"apellido\":\"Sevilla\",\r\n    \"biografia\":\"Fabian Sevilla es un aclamado autor contemporáneo conocido por sus obras literarias que exploran temas profundos de la condición humana. Su prosa elocuente y su enfoque en la introspección han dejado una marca perdurable en la literatura contemporánea.\"\r\n}"
+						},
+						"url": {
+							"raw": "https://tp-apirest-pag.onrender.com/api/v1/autores",
+							"protocol": "https",
+							"host": [
+								"tp-apirest-pag",
+								"onrender",
+								"com"
+							],
+							"path": [
+								"api",
+								"v1",
+								"autores"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n        \"id\": 1,\r\n        \"nombre\": \"Julian\",\r\n        \"apellido\": \"Romagnoli\",\r\n        \"biografia\": \"Marcelo Romagnoli, nacido en 1974, es un autor imaginario cuyas palabras han tejido historias cautivadoras en el mundo de la literatura.\"\r\n    }"
+						},
+						"url": {
+							"raw": "https://tp-apirest-pag.onrender.com/api/v1/autores/1",
+							"protocol": "https",
+							"host": [
+								"tp-apirest-pag",
+								"onrender",
+								"com"
+							],
+							"path": [
+								"api",
+								"v1",
+								"autores",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "https://tp-apirest-pag.onrender.com/api/v1/autores/2",
+							"protocol": "https",
+							"host": [
+								"tp-apirest-pag",
+								"onrender",
+								"com"
+							],
+							"path": [
+								"api",
+								"v1",
+								"autores",
+								"2"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Localidad",
+			"item": [
+				{
+					"name": "Get all",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://tp-apirest-pag.onrender.com/api/v1/localidades",
+							"protocol": "https",
+							"host": [
+								"tp-apirest-pag",
+								"onrender",
+								"com"
+							],
+							"path": [
+								"api",
+								"v1",
+								"localidades"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get one",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://tp-apirest-pag.onrender.com/api/v1/localidades/1",
+							"protocol": "https",
+							"host": [
+								"tp-apirest-pag",
+								"onrender",
+								"com"
+							],
+							"path": [
+								"api",
+								"v1",
+								"localidades",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"denominacion\": \"Lujan de Cuyo\"\r\n}"
+						},
+						"url": {
+							"raw": "https://tp-apirest-pag.onrender.com/api/v1/localidades",
+							"protocol": "https",
+							"host": [
+								"tp-apirest-pag",
+								"onrender",
+								"com"
+							],
+							"path": [
+								"api",
+								"v1",
+								"localidades"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{   \r\n    \"id\": 1,\r\n    \"denominacion\": \"Las Heras\"\r\n}"
+						},
+						"url": {
+							"raw": "https://tp-apirest-pag.onrender.com/api/v1/localidades/1",
+							"protocol": "https",
+							"host": [
+								"tp-apirest-pag",
+								"onrender",
+								"com"
+							],
+							"path": [
+								"api",
+								"v1",
+								"localidades",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "https://tp-apirest-pag.onrender.com/api/v1/localidades/2",
+							"protocol": "https",
+							"host": [
+								"tp-apirest-pag",
+								"onrender",
+								"com"
+							],
+							"path": [
+								"api",
+								"v1",
+								"localidades",
+								"2"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
