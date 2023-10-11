@@ -34,7 +34,7 @@ Pueden haber demoras en la carga de la pagina, debido a la congestión de la mis
 
 2- En la esquina superior izquierda de la ventana de Postman (junto a New), seleccionar "Import".
 
-3- Dropear en la ventana que se abrira el archivo ""
+3- Dropear en la ventana que se abrira, el archivo "ApiRequestPaginacion.postman_collection.json"
 
 ## Realizado por
 [Ezquiel Tenerini](https://github.com/Teneze)
